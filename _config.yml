@@ -1,4 +1,4 @@
-theme: jekyll-theme-hacker
+remote_theme: pmarsceill/just-the-docs
 title: Jeffrey Urban
 description: My personal notes
 google_analytics: UA-131568067-1
