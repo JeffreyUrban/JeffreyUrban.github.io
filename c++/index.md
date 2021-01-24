@@ -94,7 +94,12 @@ Use `nullptr`, not `NULL`, which is deprecated. `nullptr` is a real pointer, whe
 
 As Edge List: 
 
-	vector<vector<int>> graph = {{0, 1}, {1, 2}, {1, 3}, {2, 3}};
+	vector<vector<int>> graph = {
+        {0, 1}, 
+        {1, 2}, 
+        {1, 3}, 
+        {2, 3}
+    };
 
 _Keep in mind, this won't include nodes with no edges. Consider separate node list._
 
