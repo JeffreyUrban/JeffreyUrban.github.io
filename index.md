@@ -5,4 +5,8 @@
 layout: home
 ---
 
-My notes
+A cache of computing notes for my own quick reference.
+
+These may provide insight on some areas of experience.
+
+**Please excuse awkward formatting while I adapt this site from tab outline text to markdown.**

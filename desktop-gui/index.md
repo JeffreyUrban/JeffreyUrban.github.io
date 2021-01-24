@@ -44,3 +44,10 @@ Learn to more easily resize windows: https://askubuntu.com/questions/25670/is-th
 Gnome
   Force move file (vs copy): drag while holding shift
 
+Recover sound from 'dummy output' (audio / headphones)
+[Source](https://www.linuxquestions.org/questions/linux-hardware-18/ubuntu-18-04-dummy-output-and-sound-disappeared-4175659386/)
+
+```
+killall pulseaudio
+pulseaudio -k
+```
