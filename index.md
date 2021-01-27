@@ -5,8 +5,8 @@
 layout: home
 ---
 
-A cache of computing notes for my own quick reference.
-
-These may provide insight on some areas of experience.
+This is a cache of computing notes for my own quick reference, for when a websearch doesn't return sufficiently focused results.
 
 **Please excuse awkward formatting while I adapt this site from tabbed outline text to markdown.**
+
+[Submit an issue or pull request](https://github.com/JeffreyUrban/JeffreyUrban.github.io)
