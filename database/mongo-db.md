@@ -3,17 +3,19 @@ title: MongoDB
 parent: Database
 ---
 
-Uses `bson` \(JSON in binary\)
+Uses `bson` (JSON in binary)
 
 Document is like a pre-computed join.
 
-## Installation:
+## Installation
 
-[https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)  
-Using the official version, so check for and uninstall the ubuntu packaged version \(unsupported\):  
+[Reference](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)  
+
+Using the official version, so check for and uninstall the ubuntu packaged version (unsupported):  
+
 `sudo apt list --installed | grep mongodb`
 
-Install \(here, version 4.2\):
+Install (here, version 4.2):
 
 ```bash
 wget -qO - https://www.mongodb.org/static/pgp/server-4.2.asc | sudo apt-key add -
@@ -21,15 +23,19 @@ echo "deb [ arch=amd64 ] https://repo.mongodb.org/apt/ubuntu bionic/mongodb-org/
 sudo apt update
 ```
 
-## **Interactive Shell:**
+## Interactive Shell
 
 Open: `mongo`
 
 ### Free Monitoring
 
 Toggle:  
-`db.enableFreeMonitoring()  
-db.disableFreeMonitoring()`
+
+```bash
+db.enableFreeMonitoring()  
+db.disableFreeMonitoring()
+```
 
 Access:  
-https://cloud.mongodb.com/freemonitoring/cluster/&lt;unique-id&gt;
+
+[Free Monitoring](https://cloud.mongodb.com/freemonitoring/cluster/&lt;unique-id&gt;)

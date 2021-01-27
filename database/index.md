@@ -29,8 +29,8 @@ Like a key-value store, but can query and index down into contained structures.
 
 ## To Organize
 
-Sync DB  
-  [https://ampliapps.com/sqlite-sync/](https://ampliapps.com/sqlite-sync/) \(Already have SQLite onboard\)  
-  Good advice: [https://thenewstack.io/4-steps-to-select-the-right-database-for-your-internet-of-things-system/](https://thenewstack.io/4-steps-to-select-the-right-database-for-your-internet-of-things-system/)  
-  CouchDB  
-  [https://www.harperdb.io/solution/iot-edge](https://www.harperdb.io/solution/iot-edge)  
+[Selecting a database for IoT](https://thenewstack.io/4-steps-to-select-the-right-database-for-your-internet-of-things-system/)
+
+### Sync DB  
+
+[Reference](https://ampliapps.com/sqlite-sync/)  

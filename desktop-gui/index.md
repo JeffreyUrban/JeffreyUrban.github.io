@@ -4,48 +4,59 @@ title: Desktop GUI
 
 # Gnome
 
-Extension management  
- [https://extensions.gnome.org](https://extensions.gnome.org) \# Webpage can request access to Gnome on system  
- Recover off-screen window:  
-  `alt-space`, `down arrow`, `enter` \(Select Maximize in off-screen pull-down menu\)
+## Extension management  
+
+[Extension Management](https://extensions.gnome.org) 
+
+_Webpage can request access to Gnome on system_
+
+## Recover off-screen window:  
+
+Steps to select Maximize in off-screen pull-down menu:
+
+`alt-space`, `down arrow`, `enter` 
 
 ## Create desktop shortcut:
 
 Install GUI application 'Main Menu'
 
-## To Organize
+## Add to dock
 
-Add to dock:  
 Search in application launcher. Right click -> Add to Favorites.
 
-Enter text shell from login GUI:  
-  `ctrl-alt-F3`  
+## Enter text shell from login GUI:  
 
- Open terminal  
-  `Super-T`
+`ctrl-alt-F3`  
 
-'Legacy' status icons \(application menus, including Dropbox, Jetbrains\)  
-[https://pop.system76.com/docs/status-icons/](https://pop.system76.com/docs/status-icons/)  
+## Open terminal  
 
-# Other
+`Super-T`
 
-Install pinyin roman characters with tone marks
+## Restore 'Legacy' icons
+
+(application menus, including Dropbox, Jetbrains)
+
+['Legacy' status icons](https://pop.system76.com/docs/status-icons/)
+
+## Install pinyin roman characters with tone marks
+
+```bash
+sudo apt install ibus-m17n
+sudo apt install ibus-pinyin
+ibus restart
 ```
-	sudo apt install ibus-m17n
-	sudo apt install ibus-pinyin
-	ibus restart
-```
 
-Share Internet connection over Ethernet:
-  `nm-connection-editor`
+## Share Internet connection over Ethernet:
 
-Learn to more easily resize windows: https://askubuntu.com/questions/25670/is-there-any-way-to-make-the-window-resizing-less-sensitive
+`nm-connection-editor`
 
-Gnome
-  Force move file (vs copy): drag while holding shift
+## Force move file (vs copy)
 
-Recover sound from 'dummy output' (audio / headphones)
-[Source](https://www.linuxquestions.org/questions/linux-hardware-18/ubuntu-18-04-dummy-output-and-sound-disappeared-4175659386/)
+drag while holding shift
+
+## Recover sound from 'dummy output' (audio / headphones)
+
+[Reference](https://www.linuxquestions.org/questions/linux-hardware-18/ubuntu-18-04-dummy-output-and-sound-disappeared-4175659386/)
 
 ```
 killall pulseaudio
