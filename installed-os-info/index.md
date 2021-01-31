@@ -2,25 +2,16 @@
 title: Installed OS Info
 ---
 
-Linux installation and host info:  
-  `/etc/\*-release`  
-  `hostnamectl`  
+# Host info
 
- Operating System identification data:  
-  `/etc/os-release`  
+`hostnamectl`  
 
- Check Operating System Identification data, including distribution  
-  \(change existing entry\)  
-   Operating System identification data:  
-    `/etc/os-release`  
-  \(to new entry\)  
-   `cat /etc/_-release` \# includes redhat-release, os-release, etc.  
+# Operating System identification data
 
- Use `hostnamectl`, `cat /etc/*-release` to learn about our Linux installation and host configuration.
+`cat /etc/{redhat,os}-release` _...and similar_
 
-## To Organize
+# Distribution-specific information
 
-Distribution-Specific information: `lsb_release -dc`
+`lsb_release -a`
 
-Distribution-specific information:
-	`lsb_release -a`
+`lsb_release -dc`

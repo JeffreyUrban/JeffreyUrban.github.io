@@ -3,37 +3,47 @@ title: CAN & vcan
 parent: IO
 ---
 
-generate at realistic rate \(from logged data\):  
-  :  
-```
-   sudo modprobe vcan  
-   sudo ip link add dev  type vcan  
-   sudo ip link set up   
-   while \(true\); do canplayer -I ; done  
-```
-TODO: Check commands versus original notes
+# Decode CAN:
 
- Collapse cantools decode:  
-  `| cantools decode  | grep "^ " | awk '!/\(/ && last {print last} !/\(/ && last \|\| !/\(/ {print} /\(/{last=$0}' \| awk '//{printf "%s ",$0;next} 1'`  
-TODO: Check commands versus original notes
+`... | cantools decode  2> /dev/null`
 
- Start a vcan  
+## Collapse cantools decode
+
 ```
-  sudo modprobe vcan  
-  sudo ip link add dev  type vcan  
-  sudo ip link set up   
+... | cantools decode  | grep "^ " \
+    | awk '!/(/ && last {print last} !/(/ && last \|\| !/(/ {print} /(/{last=$0}' \
+    | awk '//{printf "%s ",$0;next} 1'
 ```
 
- `vcan`  
-  [https://elinux.org/Bringing\_CAN\_interface\_up](https://elinux.org/Bringing_CAN_interface_up)  
-  Recommended <=500 frames/s on Beaglebone or similar  
+# List all signals from all dbc files
 
- Decode CAN:  
-   `| cantools decode  2> /dev/null`  
+```
+ls *.dbc | xargs -I '{}' cantools dump '{}' \
+    | grep ^" +-- " | cut -d ' ' -f9 \
+    | sort | uniq | tee can_signals
+```
 
- List all signals from all dbc files  
-  `ls *.dbc | xargs -I '{}' cantools dump '{}' | grep ^" +-- " | cut -d ' ' -f9 | sort | uniq | tee can_signals`  
-TODO: Check commands versus original notes
+# vCAN
 
- [https://elinux.org/Bringing\_CAN\_interface\_up](https://elinux.org/Bringing_CAN_interface_up)  
- [https://stackoverflow.com/questions/31328302/canplayer-wont-replay-candump-files](https://stackoverflow.com/questions/31328302/canplayer-wont-replay-candump-files)  
+[Reference](https://elinux.org/Bringing_CAN_interface_up)
+
+## Start a vcan  
+
+```
+sudo modprobe vcan  
+sudo ip link add dev  type vcan  
+sudo ip link set up   
+```
+
+_Recommended <=500 frames/s on Beaglebone or similar_
+
+## Generate at realistic rate (from logged data)
+
+```
+ sudo modprobe vcan  
+ sudo ip link add dev type vcan  
+ sudo ip link set up   
+ while (true); do canplayer -I ; done  
+```
+
+[Relevant discussion](https://stackoverflow.com/questions/31328302/canplayer-wont-replay-candump-files)

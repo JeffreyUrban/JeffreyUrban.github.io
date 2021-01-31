@@ -73,6 +73,7 @@ All processes, every second: `mpstat -P ALL 1`
 # Service: `start`, `stop`, `restart`, `status`  
 
 `sudo systemctl`
+
 `sudo systemctl  {,}`  
 
 # CPU core temp, frequency, utilization, power; Fan RPM; stress or monitor  

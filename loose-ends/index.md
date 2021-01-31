@@ -297,7 +297,7 @@ Stop `NetworkManager` from managing interface
   `/etc/NetworkManager/NetworkManager.conf`
 ```
     [keyfile]
-    unmanaged-devices=mac:48:2a:e3:58:85:c4
+    unmanaged-devices=mac:00:01:02:03:04:05
 ```
 List device status
 	`nmcli dev status`
