@@ -3,28 +3,43 @@ title: Elastic Stack
 parent: Monitor & Trace
 ---
 
-More on ELK  
-  [https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html](https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html)  
-  [https://www.elastic.co/guide/en/logstash/current/input-plugins.html](https://www.elastic.co/guide/en/logstash/current/input-plugins.html)  
-  [https://www.elastic.co/guide/en/logstash/current/plugins-filters-dissect.html](https://www.elastic.co/guide/en/logstash/current/plugins-filters-dissect.html)  
-  [https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html)  
-  [https://www.elastic.co/guide/en/logstash/current/filter-plugins.html](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html)  
-  [https://www.elastic.co/guide/en/logstash/current/output-plugins.html](https://www.elastic.co/guide/en/logstash/current/output-plugins.html)  
-  [https://www.elastic.co/guide/en/logstash/current/contributing-to-logstash.html](https://www.elastic.co/guide/en/logstash/current/contributing-to-logstash.html)  
-  [https://logz.io/blog/5-logstash-pitfalls-and-how-to-avoid-them/](https://logz.io/blog/5-logstash-pitfalls-and-how-to-avoid-them/)  
-  [https://logz.io/blog/logstash-plugins/](https://logz.io/blog/logstash-plugins/)  
-  [https://discuss.elastic.co/t/parsing-a-json-array-of-objects/55441/5](https://discuss.elastic.co/t/parsing-a-json-array-of-objects/55441/5)  
-  [https://www.elastic.co/guide/en/logstash/master/plugins-filters-split.html](https://www.elastic.co/guide/en/logstash/master/plugins-filters-split.html)  
- For syslog and other system logs  
-  [https://www.elastic.co/guide/en/logstash/current/plugins-inputs-syslog.html](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-syslog.html)  
-  [https://www.elastic.co/blog/grokking-the-linux-authorization-logs](https://www.elastic.co/blog/grokking-the-linux-authorization-logs)  
-  [https://www.elastic.co/guide/en/elasticsearch/reference/master/grok-processor.html](https://www.elastic.co/guide/en/elasticsearch/reference/master/grok-processor.html)  
-  [https://www.elastic.co/guide/en/logstash/current/config-examples.html](https://www.elastic.co/guide/en/logstash/current/config-examples.html)  
-  [https://www.kartar.net/2014/09/when-logstash-and-syslog-go-wrong/](https://www.kartar.net/2014/09/when-logstash-and-syslog-go-wrong/)  
+# Logstash
 
- Investigate logstash reliability and consider implementing with Redis  
-  [https://logz.io/blog/fluentd-logstash/](https://logz.io/blog/fluentd-logstash/)  
-   Logstash: Needs to be deployed with Redis to ensure reliability  
+[Command-Line](https://www.elastic.co/guide/en/logstash/current/running-logstash-command-line.html)  
+
+[Configuration Examples](https://www.elastic.co/guide/en/logstash/current/config-examples.html)
+
+Logstash needs to be deployed with Redis to ensure reliability.
+
+[Logstash Pitfalls](https://logz.io/blog/5-logstash-pitfalls-and-how-to-avoid-them/)
+
+[Comparison with FluentD](https://logz.io/blog/fluentd-logstash/)
+
+## Plugins
+
+[A Guide to Logstash Plugins](https://logz.io/blog/logstash-plugins/)  
+
+[Input Plugins](https://www.elastic.co/guide/en/logstash/current/input-plugins.html)
+- Pull from existing syslog format log: [Syslog Input Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-inputs-syslog.html)
+
+[Filter Plugins](https://www.elastic.co/guide/en/logstash/current/filter-plugins.html)  
+- Split structured text: [Dissect filter plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-dissect.html)
+- Mutations on fields: [Mutate Filter Plugin](https://www.elastic.co/guide/en/logstash/current/plugins-filters-mutate.html)
+- Create events for each entry in a list field: [Split Filter Plugin](https://www.elastic.co/guide/en/logstash/master/plugins-filters-split.html)
+
+[Output Plugins](https://www.elastic.co/guide/en/logstash/current/output-plugins.html)
+
+[Contributing Plugins](https://www.elastic.co/guide/en/logstash/current/contributing-to-logstash.html)
+
+## Scenarios 
+
+[Tips for Linux Auth Logs](https://www.elastic.co/blog/grokking-the-linux-authorization-logs)
+
+Extract structured fields from human-targeted logs: [Grok Processor](https://www.elastic.co/guide/en/elasticsearch/reference/master/grok-processor.html)
+
+[Challenges with syslog](https://www.kartar.net/2014/09/when-logstash-and-syslog-go-wrong/)
+
+===
 
  Real-time visualization, event detection, metrics from logs  
  ELK Stack - most popular log analysis  
