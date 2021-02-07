@@ -6,6 +6,8 @@ title: Kernel
 
 ## Strace
 
+Trace Linux system calls and signals.
+
 `strace -p`   
 
 Use with EXTREME caution:  
